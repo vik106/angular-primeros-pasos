@@ -1,0 +1,32 @@
+<h1>DBZ Personajes</h1>
+<hr>
+
+<div class="row">
+  <div class="col">
+
+
+<!--Mandar mediante inputs, del padre al hijo, asignar a un atributo -> llaves cuadradas []-->
+
+<!-- Borrar mediante index (onDelete)="dbzService.onDeleteCharacter($event)" -->
+
+
+<!-- cuando el service era publico -->
+<!-- [characterList]="dbzService.characters"  -->
+ <!--     (onDelete)="dbzService.deleteCharacterById($event)" -->
+
+
+    <dbz-list
+    [characterList]="characters"
+    (onDelete)="onDeleteCharacter($event)"
+    ></dbz-list>
+
+  </div>
+
+  <div class="col">
+
+    <dbz-add-character (onNewCharacter)="onNewCharacter($event)" ></dbz-add-character>
+
+  </div>
+
+</div>
+
